@@ -1,1 +1,33 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 01/29/2023 10:18:26 PM
+// Design Name: 
+// Module Name: mux_2x1_3bit
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
 
+
+module mux_2x1_3bit(
+    input [2:0]a, 
+    input [2:0]b,
+    input t,
+    output [2:0]c,
+    output T
+    );
+    mux_2x1_simple M0(a[0], b[0], t, c[0], T);
+    mux_2x1_simple M1(a[1], b[1], t, c[1], T);
+    mux_2x1_simple M2(a[2], b[2], t, c[2], T);
+endmodule
